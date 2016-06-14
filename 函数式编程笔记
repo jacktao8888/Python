@@ -5,4 +5,9 @@
     	f(-10) => 10
     2、函数的参数可以接收变量
     3、一个函数可以接受另一个函数作为参数
+        import math
+        def addsqrt(x,y,f):
+            return f(x)+f(y)
+        
+        addsqrt(25,9,math.sqrt) => 8
     4、能接受函数做参数的函数就是高阶函数
