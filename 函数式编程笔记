@@ -12,11 +12,15 @@
         addsqrt(25,9,math.sqrt) => 8
     4、能接收函数做参数的函数就是高阶函数
 练习：
-    map()函数
+##map()函数
+    def format_name(s):
+        return str.capitalize(s)    
+        //return s[0].upper() + s[1:].lower()
 
-def format_name(s):
-    return str.capitalize(s)    
-    //return s[0].upper() + s[1:].lower()
+    print map(format_name, ['adam', 'LISA', 'barT'])
 
-
-print map(format_name, ['adam', 'LISA', 'barT'])
+##reduce()函数
+    def f(x, y):
+        return x + y
+    
+    print reduce(f,[1,2,3,5,8],100) => (100+1)+2+3+5+8
