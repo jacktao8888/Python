@@ -11,3 +11,12 @@
         
         addsqrt(25,9,math.sqrt) => 8
     4、能接收函数做参数的函数就是高阶函数
+练习：
+    map()函数
+
+def format_name(s):
+    return str.capitalize(s)    
+    //return s[0].upper() + s[1:].lower()
+
+
+print map(format_name, ['adam', 'LISA', 'barT'])
