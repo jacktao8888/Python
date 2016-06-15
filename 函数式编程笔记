@@ -46,4 +46,18 @@ filter()根据判断结果自动过滤掉不符合条件的元素，返回由符
     a.strip()
     结果：'123'
     
+##sorted()排序函数
+-    sorted([20,10,30,5,90,70])  //默认从小到大排序
+-    sorted([20,10,30,5,90,70],reversed_cmp)     //自定义从大到小排序
+    def reversed_cmp(x,y):
+        if x>y
+            return -1
+        if x<y
+            return 1
+        if x=y
+            return 0
+
+-    def cmp_ignore(s1,s2):
+         return cmp(s1.lower(),s2.lower())
     
+     sorted(['Linda','jeccy','Lucy','david'])
