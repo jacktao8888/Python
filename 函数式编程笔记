@@ -64,3 +64,17 @@ filter()根据判断结果自动过滤掉不符合条件的元素，返回由符
 
 ##闭包函数
     外层函数返回内层函数，内层函数引用外层函数的变量（包括参数）
+    注意：内层函数不能引用外层的循环变量！
+ 例：
+    def count():
+    fs = []
+    for i in range(1, 4):
+        def f(s=i):
+            return s*s
+        fs.append(f)
+    return fs
+
+    f1, f2, f3 = count()
+    print f1(), f2(), f3()
+    
+
