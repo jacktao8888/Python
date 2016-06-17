@@ -82,5 +82,12 @@ filter()根据判断结果自动过滤掉不符合条件的元素，返回由符
     
 ##偏函数
     重新定义函数，并取一个别名
+    例：
+        int()函数：int('123')   =>  123
+                   int('12',base=16)    =>  18
+        int16()函数：def int16(x,base=16):
+                         return int(x,base)
+                或者 import functools
+                     int16 = functools.partial(int, base=16)
     
 
