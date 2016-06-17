@@ -89,5 +89,9 @@ filter()根据判断结果自动过滤掉不符合条件的元素，返回由符
                          return int(x,base)
                 或者 import functools
                      int16 = functools.partial(int, base=16)
+    例：
+        import functools
+        sorted_ignored_case = functools.partial(sorted, cmp=lambda s1,s2:cmp(s1.upper(),s2.upper()))
+        sorted_ignored_case = functools.partial(sorted, key=str.lower)
     
 
