@@ -19,5 +19,11 @@
   print isinstance(s,object)  =>true
 
 ##获取对象的信息：
+-  isinstance()
+-  type()       //获取变量类型
+-  dir()        //获取变量所有属性
+
   getattr(p,'name')
   setattr(p,'name','Victor')
+  
+
