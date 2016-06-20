@@ -10,3 +10,30 @@
     
     p=Person('Bob','Male')
     print p     =>  Person: Bob, Male
+
+##__cmp__()
+  Student类实现了按name进行排序：
+    >>> L = [Student('Tim', 99), Student('Bob', 88), Student('Alice', 77)]
+    >>> print sorted(L)
+  [(Alice: 77), (Bob: 88), (Tim: 99)]注意: 如果list不仅仅包含 Student 类，则 __cmp__ 可能会报错：
+    L = [Student('Tim', 99), Student('Bob', 88), 100, 'Hello']
+    print sorted(L)请思考如何解决。
+    
+  例：请修改 Student 的 __cmp__ 方法，让它按照分数从高到底排序，分数相同的按名字排序。
+    class Student(object):
+      def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+      def __str__(self):
+        return '(%s: %s)' % (self.name, self.score)
+
+      __repr__ = __str__
+
+      def __cmp__(self, s):
+        if self.score == s.score:
+            return cmp(self.name, s.name)
+        return -cmp(self.score, s.score)
+
+    L = [Student('Tim', 99), Student('Bob', 88), Student('Alice', 99)]
+    print sorted(L)
