@@ -1,1 +1,13 @@
-
+初始化实例属性：
+    现实世界中，一种类型的实例应该拥有相同名字的属性。例如，Person类应该在创建的时候就拥有 name、gender 和 birth 属性，怎么办？
+例：
+  class Person(object):
+    def __init__(self,name,gender,birth,**kw):
+      self.name=name
+      self.gender=gender
+      self.birth=birth
+      for k,v in kw.iteritems():
+        setattr(self,k,v)
+  
+  xiaoming=Person('XiaoMing','Male','1991-1-1',job='student')
+  print xiaoming.job
