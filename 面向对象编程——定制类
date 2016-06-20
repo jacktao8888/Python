@@ -37,3 +37,10 @@
 
     L = [Student('Tim', 99), Student('Bob', 88), Student('Alice', 99)]
     print sorted(L)
+    
+##__len__():
+  里面的显示斐波那契数列的例子没看懂~_~
+  
+  
+  
+  
