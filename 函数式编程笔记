@@ -60,7 +60,7 @@ filter()根据判断结果自动过滤掉不符合条件的元素，返回由符
 -    def cmp_ignore(s1,s2):
          return cmp(s1.lower(),s2.lower())
     
-     sorted(['Linda','jeccy','Lucy','david'])
+     sorted(['Linda','jeccy','Lucy','david'],cmp_ignore)
 
 ##闭包函数
     外层函数返回内层函数，内层函数引用外层函数的变量（包括参数）
