@@ -35,4 +35,26 @@
         print p2.address        =>Earth
         print Person.address    =>Earth
 
-
+##类方法和实例方法（方法即定义的函数）：
+    在class中定义的全部是实例方法
+    通过标记一个 @classmethod，该方法将绑定到 Person 类上，而非类的实例。类方法的第一个参数将传入类本身，通常将参数名命名为 cls
+    例：
+        class Person(object):
+        count = 0
+        @classmethod
+        def how_many(cls):
+            return cls.count
+        def __init__(self, name):
+            self.name = name
+            Person.count = Person.count + 1
+    
+        print Person.how_many()
+        p1 = Person('Bob')
+        print Person.how_many()
+        
+        
+        
+    
+    
+    
+    
