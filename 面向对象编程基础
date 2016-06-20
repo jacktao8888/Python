@@ -2,7 +2,7 @@
     现实世界中，一种类型的实例应该拥有相同名字的属性。例如，Person类应该在创建的时候就拥有 name、gender 和 birth 属性，怎么办？
 例：
   class Person(object):
-    def __init__(self,name,gender,birth,**kw):
+    def __init__(self,name,gender,birth,**kw):      //  *参数 表示为list  **参数 表示dict
       self.name=name
       self.gender=gender
       self.birth=birth
