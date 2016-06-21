@@ -49,9 +49,9 @@
                 self.name = name
                 Person.count = Person.count + 1
     
-        print Person.how_many()
+        print Person.how_many()     //0
         p1 = Person('Bob')
-        print Person.how_many()
+        print Person.how_many()     //1
         
 ##给一个实例添加方法：
     例:
