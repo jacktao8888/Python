@@ -43,6 +43,9 @@
   
 ##@property:
   @property,可以将python定义的函数“当做”属性访问，从而提供更加友好访问方式
+  @property---这是关键字，固定格式，能让方法当“属性”用。
+  @score.setter---前面的"score"是@property紧跟的下面定义的那个方法的名字，"setter"是关键字，
+   这种“@+方法名字+点+setter”是个固定格式与@property搭配使用。
   例：
     class Student(object):
       def __init__(self, name, score):
