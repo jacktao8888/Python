@@ -31,6 +31,20 @@
       pass
     print test()
     
+##完善decorator
+  例：
+    有decorator的情况下，再打印函数名：
+    def log(f):
+      def wrapper(*args, **kw):
+        print 'call...'
+        return f(*args, **kw)
+      return wrapper
+    @log
+    def f2(x):
+      pass
+    print f2.__name__
+    输出： wrapper
+    
     
     
     
