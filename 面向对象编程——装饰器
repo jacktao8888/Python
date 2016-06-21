@@ -1,3 +1,4 @@
+##不带参数的decorator
 例：
   import time
   def performance(f):
@@ -14,3 +15,22 @@
       return reduce(lambda x,y: x*y, range(1, n+1))
   
   print factorial(10)
+
+##带参数的decorator
+  例：
+    def log(prefix):
+      def log_decorator(f):
+        def wrapper(*args, **kw):
+          print '[%s] %s()...' % (prefix, f.__name__)
+          return f(*args, **kw)
+        return wrapper
+      return log_decorator
+  
+    @log('DEBUG')
+    def test():
+      pass
+    print test()
+    
+    
+    
+    
