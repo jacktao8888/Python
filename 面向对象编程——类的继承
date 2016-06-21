@@ -24,6 +24,7 @@
 -  dir()        //获取变量所有属性
 
   getattr(p,'name')
+  getattr(p,'name','David') //如果获取不到name属性，则设置name='David'属性
   setattr(p,'name','Victor')
   
 
