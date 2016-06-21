@@ -44,7 +44,16 @@
       pass
     print f2.__name__
     输出： wrapper
-    
-    
+   
+  如果要让调用者看不出一个函数经过了@decorator的“改造”，就需要把原函数的一些属性复制到新函数中，
+  Python内置的functools可以用来自动化完成这个“复制”的任务： 
+  例： 
+    import functools
+    def log(f):
+      @functools.wraps(f)   //复制原函数的属性到新函数上，这里很难包括新、旧函数的参数信息！
+      def wrapper(*args, **kw):
+        print 'call...'
+        return f(*args, **kw)
+      return wrapper
     
     
