@@ -114,6 +114,24 @@
     My name is Bob...
     My friend is Tim...
   
+  例：
+    class Fib(object):
+    def __call__(self,num):
+        L=[0,1]
+        for i in range(num-2):
+            L.append(L[i]+L[i+1])
+        return L
+
+    f = Fib()
+    print f(10)   =>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+    
+    
+    
+    
+    
+    
+    
+    
   
   
   
