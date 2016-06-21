@@ -94,7 +94,25 @@
     s.score = 99
     print s.score
   
+##__call__():
+  一个类实例也可以变成一个可调用对象，只需要实现一个特殊方法__call__()。
+  例：
+    我们把 Person 类变成一个可调用对象：
+
+    class Person(object):
+      def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
   
+      def __call__(self, friend):
+        print 'My name is %s...' % self.name
+        print 'My friend is %s...' % friend
+    现在可以对 Person 实例直接调用：
+    
+    >>> p = Person('Bob', 'male')
+    >>> p('Tim')
+    My name is Bob...
+    My friend is Tim...
   
   
   
