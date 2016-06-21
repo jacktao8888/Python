@@ -23,9 +23,9 @@
     
     例：
         class Person(object):
-        address = 'Earth'
-        def __init__(self, name):
-            self.name = name
+            address = 'Earth'
+            def __init__(self, name):
+                self.name = name
 
         p1 = Person('Bob')
         p2 = Person('Alice')
@@ -41,13 +41,13 @@
     因为是在类上调用，而非实例上调用，因此类方法无法获得任何实例变量，只能获得类的引用。
     例：
         class Person(object):
-        count = 0
-        @classmethod
-        def how_many(cls):
-            return cls.count
-        def __init__(self, name):
-            self.name = name
-            Person.count = Person.count + 1
+            count = 0
+            @classmethod
+            def how_many(cls):
+                return cls.count
+            def __init__(self, name):
+                self.name = name
+                Person.count = Person.count + 1
     
         print Person.how_many()
         p1 = Person('Bob')
