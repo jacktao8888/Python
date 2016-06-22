@@ -1,1 +1,15 @@
+#网页下载器：
+  Python官方基础模块——urllib2
+  第三方模块——requests
 
+##urllib2:
+  ###下载网页方法1：
+  import urllib2
+  response=urllib2.urlopen("www.baidu.com")   //直接请求
+  print response.getcode()                    //获取状态码，如果是200，表示获取成功
+  cont=response.read()                        //读取内容
+  
+  ###下载网页方法2：
+  import urllib2
+  response=urlopen(request)
+  
