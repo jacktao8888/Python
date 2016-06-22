@@ -11,5 +11,25 @@
   
   ###下载网页方法2：
   import urllib2
-  response=urlopen(request)
+  request=urllib2.Request(url)                    //创建Request对象
+  request.add_data('a','1')                       //添加数据
+  request.add_header('User-Agent','Mozilla/5.0)   //添加http的header
+  response=urllib2.urlopen(request)               //发送请求获取结果
   
+  ###下载网页方法3：
+  添加特殊情景的处理器：HTTPCookieProcessor、ProxyHandler、HTTPSHandler、HTTPRedirectHandler
+  创建opener对象：opener=urllib2.build_opener(handler)
+  安装opener才具有相应的处理能力：urllib2.install_opener(opener)
+  最终可以：urllib2.urlopen(url)或者urllib2.urlopen(request)
+  例：下载网页增加cookie的处理
+    import urllib2,cookielib
+    cj=cookielib.CookieJar()                                          //创建cookie容器
+    opener=urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))      //创建一个opener对象
+    urllib2.install_opener(opener)                                    //给urllib2安装opener
+    response=urllib2.urlopen("www.baidu.com")                         //使用带有cookie的urllib2访问网页
+    
+    
+    
+    
+    
+    
