@@ -4,7 +4,10 @@
 
 ##结构化解析（DOM树-Document Object Model）：html.parser、Beautiful Soup、lxml
 
-###安装beautisoup4：WIN7下先添加python的环境变量（cmd下set PATH=%PATH%;D:\software\Python27，好像只能这么添加），
+###安装beautisoup4：
+    WIN7下先添加python的环境变量（cmd下set PATH=%PATH%;D:\software\Python27，好像只能这么添加），
     然后安装pip工具（python setup.py install），最后通过pip工具安装beautifulsoup4(pip install beautifulsoup4)
 
+###应用BeautifulSoup解析网页：
+    
 
