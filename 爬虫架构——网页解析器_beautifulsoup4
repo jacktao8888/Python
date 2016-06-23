@@ -14,5 +14,10 @@
                    'html.parser',
                    from_encoding='utf-8'
                    )
-    soup.find_all(nodename,attrs,string)
+    ####查找节点：soup.find_all(nodename,attrs,string)
+                  soup.find_all('a',href='',string='python')
+    ####找到节点：  如<a href='1.html'>Python</a>
+                    node.name           //获取查找到的节点的标签名称
+                    node['href']        //获得查找到的a节点的href属性
+                    node.get_text()     //获取查找到的a节点的链接文字
 
