@@ -9,5 +9,10 @@
     然后安装pip工具（python setup.py install），最后通过pip工具安装beautifulsoup4(pip install beautifulsoup4)
 
 ###应用BeautifulSoup解析网页：
-    
+    soup=BeautifulSoup(
+                   html_doc,
+                   'html.parser',
+                   from_encoding='utf-8'
+                   )
+    soup.find_all(nodename,attrs,string)
 
