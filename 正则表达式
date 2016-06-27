@@ -9,3 +9,11 @@ ma.string   =>'hello world'
 ma = re.match(r'hello', str1)
 ma.group()  =>'hello'
 
+正则表达式语法:
+.           匹配任意字符
+[...]       匹配字符集
+\d或\D      匹配数字或非数字
+\s或\S      匹配空白或非空白字符
+\w或\W      匹配单词字符[a-zA-Z0-9]或非单词字符
+
+
