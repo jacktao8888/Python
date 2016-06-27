@@ -1,0 +1,11 @@
+import re
+
+str1 = 'hello world'
+pa = re.compile(r'hello')
+ma = pa.mathch(str1)
+ma.group()  =>'hello'
+ma.string   =>'hello world'
+
+ma = re.match(r'hello', str1)
+ma.group()  =>'hello'
+
