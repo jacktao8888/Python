@@ -1,1 +1,2 @@
-安装python官方各种模块的网址:https://pypi.python.org/pypi
+#安装python官方各种模块的网址:https://pypi.python.org/pypi
+#安装ipython之前要安装好相应的readline
