@@ -2,6 +2,9 @@
 #import urllib.request
 #ImportError: No module named request
 
+#各个浏览器显示的Request URL：http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule&smartresult=ugc&sessionFrom=dict2.index
+#但是用这个URL无法爬取信息，打不开页面，
+#只能用视频中小甲鱼提供的URL：http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule&smartresult=ugc&sessionFrom=http://www.youdao.com/
 
 import urllib.request
 import urllib.parse
