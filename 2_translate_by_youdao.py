@@ -1,6 +1,8 @@
 #python3整合了urllib和urllib2,而且urllib只有用python3作解释器才不会报错：
 #import urllib.request
 #ImportError: No module named request
+#
+#python3代码里可以有中文字符而不报错
 
 
 import urllib.request
