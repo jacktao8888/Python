@@ -2,7 +2,7 @@ import urllib.request
 import urllib.parse
 import json
 
-var = input("input your text: ")
+var = input("请输入需要翻译的内容: ")
 
 url = 'http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule&smartresult=ugc&sessionFrom=http://www.youdao.com/'
 data = {}
@@ -27,4 +27,4 @@ html = response.read().decode('utf-8')
 target = json.loads(html)
 
 
-print (target['translateResult'][0][0]['tgt'])
+print ("翻译结果：%s"%target['translateResult'][0][0]['tgt'])
