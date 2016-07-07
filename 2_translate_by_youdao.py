@@ -1,3 +1,8 @@
+#python3整合了urllib和urllib2,而且urllib只有用python3作解释器才不会报错：
+#import urllib.request
+#ImportError: No module named request
+
+
 import urllib.request
 import urllib.parse
 import json
@@ -23,9 +28,8 @@ header = {}
 header['User-Agent'] = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
 
 req = urllib.request.Request(url, data, header)
-#response = urllib.request.urlopen(url, data)
 response = urllib.request.urlopen(req)
-
+#response = urllib.request.urlopen(url, data)
 
 html = response.read().decode('utf-8')
  
@@ -33,4 +37,4 @@ target = json.loads(html)
 
 
 print ("翻译结果：%s"%target['translateResult'][0][0]['tgt'])
-print req.headers
+print (req.headers)
