@@ -4,6 +4,7 @@ import re
 import urllib.request
 
 #Python3不用写入'#encoding:utf-8'也可以写入中文注释，Python2就不可以*_*
+#GitHub里面缩进只有两个空格，不过下载之后也能运行
 
 def open_url(url):
   header = {}
