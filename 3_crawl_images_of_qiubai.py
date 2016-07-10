@@ -45,9 +45,8 @@ def save_image(links):
   for link in links:
     filename = link.split('/')[-1]
     img = urllib.request.urlopen(link)
-        
-  with open(filename, 'wb') as f:
-    f.write(img.read())
+    with open(filename, 'wb') as f:
+      f.write(img.read())
     
 def download_image(dir, url):
   os.mkdir(dir)
