@@ -13,6 +13,8 @@ re.search(r'ab{3}c', 'abbbc')   =>span=(0,5),match='abbbc'
 re.search(r'ab{3}c', 'abbbbbc') =>没有匹配
 re.search(r'ab{3,10}', 'abbbbc')  =>span=(0,6),match='abbbbc' 可以匹配b的个数为3-10次
 
+re.search(r'[01]\d\d|2[0-4]\d|25[0-5]', '192')  =>匹配0-255
+
 正则表达式语法:
 .           匹配除 "\n" 之外的任何单个字符
 [...]       匹配字符集
