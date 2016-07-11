@@ -34,4 +34,9 @@ re.search(r'((25[0-5]|[01]{0,1}\d{0,1}\d|2[0-4]\d)\.){3}(25[0-5]|[01]{0,1}\d{0,1
 +?            匹配一次
 ??            匹配零次
 
+例：
+s = '<html><title>I love python</title></html>'
+re.search(r"<.+>", s)   ==> match = '<html><title>I love python</title></html>'
+re.search(r"<.+?>",s)   ==> match = '<html>'  只查找一次'<.'这种格式的字符，到'<title...'时自动回退
+
 
