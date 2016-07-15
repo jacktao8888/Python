@@ -56,8 +56,10 @@
         return self.__score
       @score.setter
       def score(self, score):
+        if not isinstance(score, int):
+          raise ValueError('score must be an integer!')
         if score < 0 or score > 100:
-            raise ValueError('invalid score')
+          raise ValueError('invalid score')
         self.__score = score
       @property
       def grade(self):
