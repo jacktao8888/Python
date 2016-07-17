@@ -1,3 +1,7 @@
+
+#根目录下客户端执行指令“python -m CGIHTTPServer 8081”
+#Serving HTTP on 0.0.0.0 port 8081 ...  即开启本地localhost（127.0.0.1）的8081端口
+#开启python自带的HTTP服务之后，浏览器URL输入localhost:8081/cgi-bin/add_html.py
 import cgi,cgitb
 from view_img import *
 
