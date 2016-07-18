@@ -1,0 +1,5 @@
+1、先在python中安装MySQLdb:pip install mysql-python
+2、然后就可以导入MySQLdb了：import MySQLdb
+3、安装MySQL Connectors(Python Driver for MySQL (Connector/Python))提供数据库和Python的接口
+4、使用数据库客户端程序SQLyog
+
