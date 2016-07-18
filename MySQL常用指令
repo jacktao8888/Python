@@ -3,9 +3,18 @@
   select Column1... from tbl where Column = value order by Column asc;   //正序排序
   例：
     select * from student order by id desc;
+    select id,name from student where id = 3;
 #插入：
   insert into tbl (Column1,Column2...) values (value1,value2);
-#删除：
-  delete form tbl where Column = value;
 #修改：
   update tbl set Column = value where Column = value;
+  例：
+    update student set name = "Peter" where name = "Jack";  //正常
+    update student set name = "Peter" where id = 1;         //可能会报错:Error Code 1175:You are using safe update mode and you 
+                                                            //tried to update a table without a WHERE that use a key column...
+#删除：
+  delete from tbl where Column = value;
+  例：
+    delete from student where name = "Jack";
+    delete from student where id = 1;   //可能会报错:Error Code 1175:You are using safe update mode and you tried to
+                                        //             update a table without a WHERE that use a key column...
