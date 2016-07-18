@@ -1,0 +1,11 @@
+#查询：
+  select Column1... from tbl where Column = value order by Column desc;   //逆序排序
+  select Column1... from tbl where Column = value order by Column asc;   //正序排序
+  例：
+    select * from student order by id desc;
+#插入：
+  insert into tbl (Column1,Column2...) values (value1,value2);
+#删除：
+  delete form tbl where Column = value;
+#修改：
+  update tbl set Column = value where Column = value;
