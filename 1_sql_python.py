@@ -10,7 +10,7 @@ sql = "select * from student"
 #insert_sql = "insert into sakila.student (name) values ('%s')"%(name)
 
 #cur.execute(insert_sql)
-#cur.commit()
+#conn.commit()
 cur.execute(sql)
 
 result = cur.fetchall()
