@@ -29,6 +29,10 @@ def user_id(id):
 def query_user():
     id = request.args.get('id')
     return 'hello user:'+id
-    
+
+@app.route('/query_url')        #flask反向路由，得出query_user路由函数的url地址
+def query_url():
+    return 'query url: '+url_for('query_user')
+
 if __name__=='__main__':
     app.run()             #默认5000端口
