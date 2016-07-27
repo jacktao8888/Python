@@ -1,5 +1,5 @@
 #安装python官方各种模块的网址:https://pypi.python.org/pypi
 #安装ipython之前要安装好相应的pyreadline
 
-#Linux下安装pip指令：sudo apt-get install python-pip
+#Linux下安装pip工具的指令：sudo apt-get install python-pip
 
