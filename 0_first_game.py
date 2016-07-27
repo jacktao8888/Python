@@ -1,3 +1,5 @@
+#当前目录下，创建/resources/，里面分别存放audio和images文件
+
 import pygame
 from pygame.locals import *
 
