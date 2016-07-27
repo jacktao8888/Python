@@ -1,5 +1,10 @@
 from flask import Flask
-from flask import request
+from flask import request，render_template,url_for
+
+class User(object):
+    def __init__(self,user_id,user_name):
+        self.user_id = user_id
+        self.user_name = user_name
 
 app = Flask(__name__)
 
@@ -20,6 +25,11 @@ def signin():
     if request.form['username']=='admin' and request.form['password']=='123456':
         return '<h3>Hello,admin!</h3>'
     return '<h3>Bad username or password</h3>'
+
+@app.route('/user')             #从后端向前端传数据
+def user():
+    user = User(1,'jikexueyuan')
+    return render_template('index.html',user=user)
 
 @app.route('/users/<id>')        #请求格式如：127.0.0.1:5000/users/Jerry
 def user_id(id):    
