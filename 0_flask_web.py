@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import request，render_template,url_for
+from flask import request，render_template,url_for,abort
 
 class User(object):
     def __init__(self,user_id,user_name):
@@ -34,6 +34,17 @@ def user():
 @app.route('/users/<id>')        #请求格式如：127.0.0.1:5000/users/Jerry
 def user_id(id):    
     return 'hello '+id
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('404.html')
+
+@app.route('/users/<user_id>')
+def users(user_id):
+    if int(user_id) == 1:
+        return render_template("user.html")
+    else:
+        abort(404)
 
 @app.route('/query_user')       #请求格式如：127.0.0.1:5000/query_user?id=Tom
 def query_user():
