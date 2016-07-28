@@ -38,7 +38,7 @@ def not_found(e):
 @app.route('/users/<user_id>')
 def users(user_id):
     if int(user_id) == 1:
-        return render_template("user.html")
+        return 'hello user:'+user_id
     else:
         abort(404)
 
