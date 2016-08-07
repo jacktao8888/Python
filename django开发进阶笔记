@@ -5,3 +5,11 @@
   3、里面默认有一个__init__.py文件，自己新建一个extra_tags.py文件，这个文件是逻辑代码
   4、在settings.py的INSTALLED_APPS里面加入刚刚创建的模板库应用templatetags——‘myApp.templatetags’
   5、html页面如果想使用模板库的代码，要加载一下——{% load extra_tags %}
+
+##中间件
+自定义中间件：在工程内app应用中创建myMiddleWare.py，然后将其添加到settings.py的MIDDLEWARE_CLASSES元组中，中间件包含以下部分
+              1、__init__
+              2、process_request
+              3、process_view
+              4、process_response
+              5、process_exception
