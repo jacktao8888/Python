@@ -1,0 +1,7 @@
+##高级模版：
+  1、决定模板库的位置
+  2、新建的模板库相当于在我的app中再建一个app，方法是在myApp上右键新建一个PythonPackage，
+     名字可以为“templatetags”
+  3、里面默认有一个__init__.py文件，自己新建一个extra_tags.py文件，这个文件是逻辑代码
+  4、在settings.py的INSTALLED_APPS里面加入刚刚创建的模板库应用templatetags——‘myApp.templatetags’
+  5、html页面如果想使用模板库的代码，要加载一下——{% load extra_tags %}

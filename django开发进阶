@@ -1,6 +1,0 @@
-##高级模版：
-  1、决定模板库的位置
-  2、新建的模板库相当于在我的app中再建一个app，方法是在myApp上右键新建一个PythonPackage，
-     名字可以为“templatetags”
-  3、里面默认有一个__init__.py文件，自己新建一个extra.py文件；
-  
