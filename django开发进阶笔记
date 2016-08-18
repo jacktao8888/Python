@@ -30,16 +30,17 @@
   网上查了一下，参考http://stackoverflow.com/questions/26185687/you-are-trying-to-add-a-non-nullable-field-new-field-to-userprofile-without-a
   需要将类里面的属性这样设置：
     1.One option is to declare a default value for 'new_field':
-    new_field = models.CharField(max_length=140, default='DEFAULT VALUE')
+      new_field = models.CharField(max_length=140, default='DEFAULT VALUE')
     
     2.another option is to declare 'new_field' as a nullable field:
-    new_field = models.CharField(max_length=140, null=True)
+      new_field = models.CharField(max_length=140, null=True)
     
-    3.If you decide to accept 'new_field' as a nullable field you may want to accept 'no input' as valid input for 'new_field'. Then you have to add the blank=True statement as well:
-    new_field = models.CharField(max_length=140, blank=True, null=True)
+    3.If you decide to accept 'new_field' as a nullable field you may want to accept 'no input' as valid input for 'new_field'. 
+      Then you have to add the blank=True statement as well:
+      new_field = models.CharField(max_length=140, blank=True, null=True)
     
     4.Even with null=True and/or blank=True you can add a default value if necessary:
-    new_field = models.CharField(max_length=140, default='DEFAULT VALUE', blank=True, null=True)
+      new_field = models.CharField(max_length=140, default='DEFAULT VALUE', blank=True, null=True)
      
      
      
