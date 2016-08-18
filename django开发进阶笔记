@@ -23,3 +23,14 @@
      
      python manage.py makemigrations    #为models.py中的修改创建迁移文件
      python manage.py migrate           #将这些修改更新到数据库中
+     
+     
+* 写models.py的类函数时，通过python manage.py shell操作API，会出现下面的错误：
+  You are trying to add a non-nullable field 'new_field' to userprofile without a default
+  网上查了一下，参考http://stackoverflow.com/questions/26185687/you-are-trying-to-add-a-non-nullable-field-new-field-to-userprofile-without-a
+  需要将类里面的属性这样设置new_field = models.CharField(max_length=140, null=True)
+     
+     
+     
+     
+     
