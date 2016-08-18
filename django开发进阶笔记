@@ -20,3 +20,6 @@
   2、编写序列化文件serializers.py，然后同步数据库，执行“python manage.py makemigrations”、“python manage.py migrate”，
      ps:django1.6之前的版本同步数据库只能用指令“python manage.py syncdb”,之后的版本就不能使用这个指令了，我安装额是最新的
      1.9的django.
+     
+     python manage.py makemigrations    #为models.py中的修改创建迁移文件
+     python manage.py migrate           #将这些修改更新到数据库中
