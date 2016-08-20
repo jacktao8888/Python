@@ -1,3 +1,12 @@
+##递归调用和尾递归
+  def fact(n):
+    return fact_iter(n,1)
+  
+  def fact_iter(num,result):
+    if num==1:
+      return result
+    return fact_iter(num-1,num*result)
+
 ##递归调用与汉诺塔算法
   def move(n,a,b,c):
     if n==1:
@@ -6,3 +15,6 @@
     move(n-1,a,c,b)
     move(1,a,b,c)
     move(n-1,b,a,c)
+
+
+
