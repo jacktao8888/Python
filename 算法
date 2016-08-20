@@ -1,5 +1,11 @@
 ##递归调用和尾递归
   def fact(n):
+    if n==1:
+      return 1
+    return n*fact(n-1)    #return中有表达式，如果n非常大，会导致栈溢出，
+                          #可以用下面的尾递归解决，但是Python解释器一般没有做尾递归优化
+ #尾递归函数如下：
+  def fact(n):
     return fact_iter(n,1)
   
   def fact_iter(num,result):
