@@ -27,7 +27,7 @@
   #方法二：
   i=1
   def move(n,a,c):
-    print "第%d步，将%d号盘子：%c-->%c"%(i++,n,a,c）  #使用i和中文字符会有问题SyntaxError
+    print "第%d步，将%d号盘子：%c-->%c"%(i++,n,a,c）  #使用i和中文字符会导致SyntaxError问题
     
   def hanoi(n,a,b,c):
     if n==1:
