@@ -32,7 +32,7 @@
   def hanoi(n,a,b,c):
     if n==1:
       move(1,a,c)
-      return
+      return          #此处如果没有return，会导致错误RuntimeError: maximum recursion depth exceeded
     hanoi(n-1,a,c,b)
     move(n,a,c)
     hanoi(n-1,b,a,c)
