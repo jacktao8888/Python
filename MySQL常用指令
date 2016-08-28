@@ -23,3 +23,48 @@
                                         //           update a table without a WHERE that use a key column...
                                         //可以在[Edit]->[Preferences...]->[SQL Editor]页面
                                         //把[Forbid UPDATE and DELETE statements without a WHERE clause (safe updates)]之前的对勾去掉
+
+数据库操作：
+create table tab_t1(
+id int(2),
+username varchar(8),
+password varchar(32)
+);
+
+create table tab_t2(
+author varchar(8),
+date varchar(10),
+title varchar(125)
+);
+
+
+alter table tab_t1 rename to tab1;
+#rename table tab_t1 to tab1;
+
+alter table tab_t2 rename to tab2;
+
+alter table tab1 add email varchar(32) not null;
+
+alter table tab1 change username user_name varchar(16);
+
+alter table tab1 drop email;
+
+drop table tab2;
+
+
+show databases;
+
+use test_db;
+show tables;
+show tables from mysql;
+
+show tables from sakila;
+
+
+use test_db;
+show tables;
+describe tab1;
+
+
+
+
