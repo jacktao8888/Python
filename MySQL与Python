@@ -18,7 +18,7 @@ def ip2int(ip):
 将整型转换为ip格式：
 def int2ip(n):
   d=256*256*256
-  ip=''
+  ip=[]       #这里是list:[],而不能是str:''，因为“'str' object has no attribute 'append'”
   while d>0:
     m,n=divmod(n,d)
     ip.append(str(m))
