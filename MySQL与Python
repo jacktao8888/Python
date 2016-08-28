@@ -7,7 +7,20 @@
 
 
 将ip（如‘192.168.1.1’）地址转换成长整型：
-ip='192.168.1.1'
-ip16=''.join(["%02x" %long(i) for i in ip.split('.')])  #16进制：'c0a80101'
-ip10=long(ip16,16)  #十进制整数：3232235777L
+#ip='192.168.1.1'
+def ip2int(ip):
+  try:
+    ip16=''.join(["%02x" %long(i) for i in ip.split('.')])  #16进制：'c0a80101'
+  except Exception as e:
+    ip16=''.join(["%02x" %long(i) for i in '0.0.0.0'.split('.')])
+  ip10=long(ip16,16)  #十进制整数：3232235777L
 
+将整型转换为ip格式：
+def int2ip(n):
+  d=256*256*256
+  ip=''
+  while d>0:
+    m,n=divmod(n,d)
+    ip.append(str(m))
+    d=d/256
+  return '.'.join(ip)
